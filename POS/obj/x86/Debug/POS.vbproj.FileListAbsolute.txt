@@ -1,0 +1,33 @@
+d:\documents\visual studio 2010\Projects\POS\POS\bin\Debug\POS.exe
+d:\documents\visual studio 2010\Projects\POS\POS\bin\Debug\POS.pdb
+d:\documents\visual studio 2010\Projects\POS\POS\bin\Debug\POS.xml
+d:\documents\visual studio 2010\Projects\POS\POS\obj\x86\Debug\POS.Form1.resources
+d:\documents\visual studio 2010\Projects\POS\POS\obj\x86\Debug\POS.Resources.resources
+d:\documents\visual studio 2010\Projects\POS\POS\obj\x86\Debug\POS.vbproj.GenerateResource.Cache
+d:\documents\visual studio 2010\Projects\POS\POS\obj\x86\Debug\POS.exe
+d:\documents\visual studio 2010\Projects\POS\POS\obj\x86\Debug\POS.xml
+d:\documents\visual studio 2010\Projects\POS\POS\obj\x86\Debug\POS.pdb
+C:\Users\CHARD\Documents\Visual Studio 2015\POS\POS\obj\x86\Debug\POS.exe
+C:\Users\CHARD\Documents\Visual Studio 2015\POS\POS\obj\x86\Debug\POS.xml
+C:\Users\CHARD\Documents\Visual Studio 2015\POS\POS\obj\x86\Debug\POS.pdb
+C:\Users\CHARD\Documents\Visual Studio 2015\POS\POS\obj\x86\Debug\POS.vbprojResolveAssemblyReference.cache
+C:\Users\CHARD\Documents\Visual Studio 2015\POS\POS\obj\x86\Debug\POS.Form1.resources
+C:\Users\CHARD\Documents\Visual Studio 2015\POS\POS\obj\x86\Debug\POS.Resources.resources
+C:\Users\CHARD\Documents\Visual Studio 2015\POS\POS\obj\x86\Debug\POS.vbproj.GenerateResource.Cache
+C:\Users\CHARD\Documents\Visual Studio 2015\POS\POS\bin\Debug\POS.exe
+C:\Users\CHARD\Documents\Visual Studio 2015\POS\POS\bin\Debug\POS.pdb
+C:\Users\CHARD\Documents\Visual Studio 2015\POS\POS\bin\Debug\POS.xml
+C:\Users\CHARD\Documents\Visual Studio 2015\Projects\POS\POS\obj\x86\Debug\POS.exe
+C:\Users\CHARD\Documents\Visual Studio 2015\Projects\POS\POS\obj\x86\Debug\POS.xml
+C:\Users\CHARD\Documents\Visual Studio 2015\Projects\POS\POS\obj\x86\Debug\POS.pdb
+D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.exe
+D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.xml
+D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.pdb
+D:\Documents\School\VB&ASP.net\POS\POS\bin\Debug\POS.exe
+D:\Documents\School\VB&ASP.net\POS\POS\bin\Debug\POS.pdb
+D:\Documents\School\VB&ASP.net\POS\POS\bin\Debug\POS.xml
+D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.vbprojResolveAssemblyReference.cache
+D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.Form1.resources
+D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.Resources.resources
+D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.vbproj.GenerateResource.Cache
+D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.LoginForm1.resources

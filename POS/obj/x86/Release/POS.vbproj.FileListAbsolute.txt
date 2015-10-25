@@ -1,0 +1,9 @@
+D:\Documents\Visual Studio 2010\Projects\POS\POS\bin\Release\POS.exe
+D:\Documents\Visual Studio 2010\Projects\POS\POS\bin\Release\POS.pdb
+D:\Documents\Visual Studio 2010\Projects\POS\POS\bin\Release\POS.xml
+D:\Documents\Visual Studio 2010\Projects\POS\POS\obj\x86\Release\POS.Form1.resources
+D:\Documents\Visual Studio 2010\Projects\POS\POS\obj\x86\Release\POS.Resources.resources
+D:\Documents\Visual Studio 2010\Projects\POS\POS\obj\x86\Release\POS.vbproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2010\Projects\POS\POS\obj\x86\Release\POS.exe
+D:\Documents\Visual Studio 2010\Projects\POS\POS\obj\x86\Release\POS.xml
+D:\Documents\Visual Studio 2010\Projects\POS\POS\obj\x86\Release\POS.pdb

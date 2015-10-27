@@ -31,3 +31,14 @@ D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.Form1.resources
 D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.Resources.resources
 D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.vbproj.GenerateResource.Cache
 D:\Documents\School\VB&ASP.net\POS\POS\obj\x86\Debug\POS.LoginForm1.resources
+D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.exe
+D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.xml
+D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.pdb
+D:\Documents\School\Thesis\POS\POS\bin\Debug\POS.exe
+D:\Documents\School\Thesis\POS\POS\bin\Debug\POS.pdb
+D:\Documents\School\Thesis\POS\POS\bin\Debug\POS.xml
+D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.vbprojResolveAssemblyReference.cache
+D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.Form1.resources
+D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.LoginForm1.resources
+D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.Resources.resources
+D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.vbproj.GenerateResource.Cache

@@ -315,35 +315,37 @@ Public Class Form1
     End Sub
 
     Private Sub btnRemoveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRemoveItem.Click
-        For lCount = ListView1.Items.Count - 1 To 0 Step -1
-            If ListView1.Items(lCount).Selected Then
-                ListView1.Items(lCount).Remove()
+        'For lCount = ListView1.Items.Count - 1 To 0 Step -1
+        '    If ListView1.Items(lCount).Selected Then
+        '        ListView1.Items(lCount).Remove()
 
-            End If
+        '    End If
 
-            Application.DoEvents()
+        '    Application.DoEvents()
 
-        Next
+        'Next
 
-        'Dim TempQuantity As Integer = 1 'Inititiate quantity
-        'Dim Price As Integer = 1 'Initiate price
-        'Dim ProductName As String = "Palaka" 'Name ng product
-        'Dim BagongList As ListViewItem = New ListViewItem(ProductName)
-        'BagongList.Name = "Baglist" 'unique Id importante to
+        Dim TempQuantity As Integer = 1 'Inititiate quantity
+        Dim Price As Integer = 1 'Initiate price
+        Dim ProductName As String = "Burger"
+        '"Spaghetti", "French Fries", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10", "Item 11", "Item 12", "Item 13", "Item 14", "Item 15", "Item 16"}
+        'Dim ProductName As String = '"Item4" Name ng product
+        Dim BagongList As ListViewItem = New ListViewItem(ProductName)
+        BagongList.Name = "Baglist" 'unique Id importante to
+        BagongList.SubItems.Add(TempQuantity)
+        BagongList.SubItems.Add(Price)
 
-        'If ListView1.SelectedItems.ContainsKey("BagList") = True Then
-        '    ListView1.Items.RemoveByKey("BagList")
-        'End If
+        If ListView1.SelectedItems.ContainsKey("BagList") = True Then
+            ListView1.Items.RemoveByKey("BagList")
+        End If
 
-        'If ListView1.Items.ContainsKey(BagongList.Name) = False Then
-        '    ListView1.Items.Remove(BagongList)
-        'Else
-        '    ListView1.Items(ListView1.Items.IndexOfKey("item4")).SubItems(1).Text = Integer.Parse(ListView1.Items(ListView1.Items.IndexOfKey("item4")).SubItems(1).Text) - 1
-        '    ListView1.Items(ListView1.Items.IndexOfKey("item4")).SubItems(2).Text = Price * Integer.Parse(ListView1.Items(ListView1.Items.IndexOfKey("item4")).SubItems(1).Text)
-        'End If
+        If ListView1.Items.ContainsKey(BagongList.Name) = False Then
+            ListView1.Items.Remove(BagongList)
+        Else
+            ListView1.Items(ListView1.Items.IndexOfKey("Burger")).SubItems(1).Text = Integer.Parse(ListView1.Items(ListView1.Items.IndexOfKey("Burger")).SubItems(1).Text) - 1
+            ListView1.Items(ListView1.Items.IndexOfKey("Burger")).SubItems(2).Text = Price * Integer.Parse(ListView1.Items(ListView1.Items.IndexOfKey("Burger")).SubItems(1).Text)
+        End If
 
-        'ListView1.Items.Remove(ListView1.Items.IndexOfKey("item4"))
-        'ListView1, items.remove(index#)
     End Sub
 
 
@@ -372,7 +374,6 @@ Public Class Form1
         txtChange.Text = amount - txtSubTotal.Text
     End Sub
 
-
     Private Sub btnCancelOrder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelOrder.Click
 
     End Sub
@@ -387,19 +388,29 @@ Public Class Form1
         txtAmountTendered.Clear()
     End Sub
 
-
     Private Sub btnPrintReceipt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrintReceipt.Click
         MakeImage()
 
     End Sub
 
+    Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Static pageNum As Integer = 1
+        pageNum += 1
+        If pageNum <= 3 Then
+            e.HasMorePages = True
+        Else
+            e.HasMorePages = False
+            pageNum = 1
+        End If
+        e.Graphics.DrawImage(Print_Image, 20, 90)
+    End Sub
 
     Private Sub PrintPreviewDialog1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrintPreviewDialog1.Load
-
+        PrintPreviewDialog1.Show()
     End Sub
 
     Private Sub MakeImage()
-        Dim prnDialog As New PrintDialog
+        Dim prnDialog As New PrintPreviewDialog
         Application.DoEvents()
         Me.Refresh()
         Application.DoEvents()
@@ -427,10 +438,6 @@ Public Class Form1
         If r = DialogResult.OK Then
             prntDoc.Print()
         End If
-    End Sub
-
-    Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
-        e.Graphics.DrawImage(Print_Image, 20, 90)
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DTPdate.ValueChanged
@@ -469,6 +476,7 @@ Public Class Form1
         'SQL start
         Dim sql As String = "INSERT INTO ProductSales(Item, Quantity, Amount) VALUES(@Item, @Quantity, @Amount)"
         cmd = New OleDbCommand(sql, con)
+
 
         cmd.Parameters.AddWithValue("@Item", colIN)
         cmd.Parameters.AddWithValue("@Quantity", colQnty)

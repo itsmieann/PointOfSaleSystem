@@ -19,7 +19,27 @@ POS
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:POS.My.Resources.Resources.Spaghetti__1_">
+</member><member name="P:POS.My.Resources.Resources.burger1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:POS.My.Resources.Resources.Spaghetti">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:POS.My.Resources.Resources.Spaghetti1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:POS.My.Resources.Resources.Spaghetti2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:POS.My.Resources.Resources.Spaghetti3">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:POS.My.Resources.Resources.Spaghetti4">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

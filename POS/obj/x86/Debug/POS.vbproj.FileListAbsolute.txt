@@ -42,3 +42,4 @@ D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.Form1.resources
 D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.LoginForm1.resources
 D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.Resources.resources
 D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.vbproj.GenerateResource.Cache
+D:\Documents\School\Thesis\POS\POS\obj\x86\Debug\POS.Form2.resources

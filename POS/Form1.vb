@@ -318,35 +318,15 @@ Public Class Form1
         amount = txtAmountTendered.Text
         Console.ReadLine()
 
-        If amount = " " Then
-            MessageBox.Show("Please enter amount given")
-            txtAmountTendered.Focus()
-        End If
-        txtChange.Text = amount - txtSubTotal.Text
-    End Sub
-
-    'Dim a As Integer
-    'Dim sSQL As String
-
-    ''use the loop if ther eare multiple invoices for the customer
-    'For a = 1 To ListView1.ListItems.Count
-
-    ''Customer no and Invoice number
-    'sSQL = "Insert into temp values ('" & txtCustNo.Text & "'," & ListView1.ListItems(a).Text & ","
-
-    ''All the sub items like Product, product desc 
-    'For b = 1 To ListView1.ListItems(a).ListSubItems.Count
-    '    sSQL = sSQL & "'" & ListView1.ListItems(a).ListSubItems(b).Text & "',"
-    'Next
-
-    ''Replace the extra "," from the string and append the ")" to the string
-    'sSQL = Left(sSQL, Len(sSQL) - 1) & ")"
-
-    'con.execute sSQL, , adexecutenorecords
-
-    'Next
-
-    Private Sub btnCancelOrder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Try
+            If amount <= " " Then
+                MsgBox("Please enter amount given")
+                txtAmountTendered.Focus()
+            End If
+            txtChange.Text = amount - txtSubTotal.Text
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
 
@@ -360,21 +340,12 @@ Public Class Form1
     End Sub
 
     Private Sub btnPrintReceipt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrintReceipt.Click
-        'MakeImage()
+        Form2.Show()
     End Sub
 
-    Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
-        
-    End Sub
 
     Private Sub PrintPreviewDialog1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrintPreviewDialog1.Load
         'PrintPreviewDialog1.Show()
-    End Sub
-
-
-    'Form Load Database
-    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        
     End Sub
 
     Private Sub Add(ByVal Item As String, ByVal Quantity As String, ByVal Amount As String)
@@ -390,24 +361,17 @@ Public Class Form1
 
     Private Sub Sales(ByVal SubTotal As String, ByVal Tax As String, ByVal NetSales As String)
         'Sql statement
-        Dim sql As String = "INSERT INTO Sales(SubTotal, Tax, NetSales) VALUES (@subtotal, @tax, @netsales)"
-        cmd = New OleDbCommand(sql, con)
+        'Dim sql As String = "INSERT INTO Sales(DatePurchased, TimePurchased, SubTotal, Tax, NetSales) VALUES (@System.DateTime.Now.ToLongDateString, @System.DateTime.Now.ToLongTimeString, @subtotal, @tax, @netsales)"
 
-        Dim purchasedatetime As Date = System.DateTime.Now
-        sql = "Insert into Sales(Date) values (@Order_Date)"
+        Dim sql As String = "INSERT INTO Sales(DatePurchased, TimePurchased, SubTotal, Tax, NetSales) VALUES ('" & System.DateTime.Now.ToLongDateString & "', '" & System.DateTime.Now.ToLongTimeString & "','" & txtSubTotal.Text & "', '" & txtTax.Text & "', '" & txtNetSales.Text & "' )"
+        cmd = New OleDbCommand(Sql, con)
 
-        'Parameters
-        cmd.Parameters.AddWithValue("@order_Date", purchasedatetime)
-        cmd.Parameters.AddWithValue("@subtotal", SubTotal)
-        cmd.Parameters.AddWithValue("@tax", Tax)
-        cmd.Parameters.AddWithValue("@netsales", NetSales)
-
-        'Open con, execute con, close con
         Try
             con.Open()
 
             If cmd.ExecuteNonQuery() > 0 Then
-                MsgBox("Sales DB successfully updated")
+                MsgBox("Sales successfully updated")
+
 
                 txtSubTotal.Text = ""
                 txtTax.Text = ""
@@ -444,11 +408,6 @@ Public Class Form1
 
     End Sub
     Private Sub btnCloseCounter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCloseCounter.Click
-        'sql
-        'Dim dateinfo As String = "INSER INTO Sales(Date)"
-        ProductSales()
-
-
         Sales(txtSubTotal.Text, txtTax.Text, txtNetSales.Text)
 
         ListView1.Items.Clear()
@@ -459,4 +418,12 @@ Public Class Form1
         txtAmountTendered.Clear()
     End Sub
 
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        tsCalen.Text = System.DateTime.Now.ToString("hh:mm:ss")
+    End Sub
+
+    Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
+        tsCal.Text = System.DateTime.Now.ToLongDateString
+    End Sub
 End Class

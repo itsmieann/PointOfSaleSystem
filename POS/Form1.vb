@@ -390,15 +390,15 @@ Public Class Form1
         Dim lvitem As Object
         Dim iCount As Integer
         Dim iLoop As Integer
-        Dim Sql As String
-        cmd = New OleDbCommand(Sql, con)
+        'Dim Sql As String
+        'cmd = New OleDbCommand(Sql, con)
 
         iCount = ListView1.Items.Count()
         If Not ListView1.Items.Count = 0 Then
             Do Until iLoop = ListView1.Items.Count
                 lvitem = ListView1.Items.Item(iLoop)
                 With lvitem
-                    Sql = "insert into ProductSales(Item,Quantity,Amount) values('" & .SubItems(0).Text & "','" & .SubItems(1).Text & "','" & .SubItems(2).Text & "')"
+                    ' Sql = "insert into ProductSales(Item,Quantity,Amount) values('" & ListView.SubItems(0).Text & "','" & .SubItems(1).Text & "','" & .SubItems(2).Text & "')"
                 End With
                 iLoop = iLoop + 1
                 lvitem = Nothing
@@ -425,5 +425,9 @@ Public Class Form1
 
     Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
         tsCal.Text = System.DateTime.Now.ToLongDateString
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
     End Sub
 End Class

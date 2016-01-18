@@ -33,10 +33,6 @@ Partial Class Form2
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.colIN = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.colQnty = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.colAMNT = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.lblTax = New System.Windows.Forms.Label()
         Me.lblNetsales = New System.Windows.Forms.Label()
         Me.lblAmountTendered = New System.Windows.Forms.Label()
@@ -44,6 +40,11 @@ Partial Class Form2
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblTime = New System.Windows.Forms.Label()
         Me.lblDate = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.colIN = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.colQnty = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.colAMNT = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'lblSubtotal
@@ -129,33 +130,6 @@ Partial Class Form2
         Me.Label6.TabIndex = 38
         Me.Label6.Text = "Sub Total"
         '
-        'ListView1
-        '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colIN, Me.colQnty, Me.colAMNT})
-        Me.ListView1.Location = New System.Drawing.Point(51, 50)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(295, 260)
-        Me.ListView1.TabIndex = 43
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'colIN
-        '
-        Me.colIN.Text = "Item Name"
-        Me.colIN.Width = 126
-        '
-        'colQnty
-        '
-        Me.colQnty.Text = "Quantity"
-        Me.colQnty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.colQnty.Width = 65
-        '
-        'colAMNT
-        '
-        Me.colAMNT.Text = "Amount"
-        Me.colAMNT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.colAMNT.Width = 120
-        '
         'lblTax
         '
         Me.lblTax.AutoSize = True
@@ -189,7 +163,7 @@ Partial Class Form2
         'lblChange
         '
         Me.lblChange.AutoSize = True
-        Me.lblChange.Location = New System.Drawing.Point(310, 422)
+        Me.lblChange.Location = New System.Drawing.Point(305, 423)
         Me.lblChange.Name = "lblChange"
         Me.lblChange.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblChange.Size = New System.Drawing.Size(45, 13)
@@ -200,7 +174,7 @@ Partial Class Form2
         'lblTime
         '
         Me.lblTime.AutoSize = True
-        Me.lblTime.Location = New System.Drawing.Point(177, 27)
+        Me.lblTime.Location = New System.Drawing.Point(150, 52)
         Me.lblTime.Name = "lblTime"
         Me.lblTime.Size = New System.Drawing.Size(36, 13)
         Me.lblTime.TabIndex = 48
@@ -209,24 +183,61 @@ Partial Class Form2
         'lblDate
         '
         Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(148, 9)
+        Me.lblDate.Location = New System.Drawing.Point(150, 31)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(36, 13)
         Me.lblDate.TabIndex = 49
         Me.lblDate.Text = "Date: "
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(150, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(76, 13)
+        Me.Label1.TabIndex = 50
+        Me.Label1.Text = "My Restaurant"
+        '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colIN, Me.colQnty, Me.colAMNT})
+        Me.ListView1.Location = New System.Drawing.Point(21, 69)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(347, 236)
+        Me.ListView1.TabIndex = 51
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'colIN
+        '
+        Me.colIN.Text = "Item Name"
+        Me.colIN.Width = 150
+        '
+        'colQnty
+        '
+        Me.colQnty.Text = "Quantity"
+        Me.colQnty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colQnty.Width = 80
+        '
+        'colAMNT
+        '
+        Me.colAMNT.Text = "Amount"
+        Me.colAMNT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colAMNT.Width = 120
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(395, 483)
+        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblDate)
         Me.Controls.Add(Me.lblTime)
         Me.Controls.Add(Me.lblChange)
         Me.Controls.Add(Me.lblAmountTendered)
         Me.Controls.Add(Me.lblNetsales)
         Me.Controls.Add(Me.lblTax)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -249,10 +260,6 @@ Partial Class Form2
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
-    Friend WithEvents colIN As System.Windows.Forms.ColumnHeader
-    Friend WithEvents colQnty As System.Windows.Forms.ColumnHeader
-    Friend WithEvents colAMNT As System.Windows.Forms.ColumnHeader
     Friend WithEvents lblChange As System.Windows.Forms.Label
     Friend WithEvents lblAmountTendered As System.Windows.Forms.Label
     Friend WithEvents lblNetsales As System.Windows.Forms.Label
@@ -260,4 +267,9 @@ Partial Class Form2
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents lblTime As System.Windows.Forms.Label
     Friend WithEvents lblDate As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents colIN As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colQnty As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colAMNT As System.Windows.Forms.ColumnHeader
 End Class
